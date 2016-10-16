@@ -7,6 +7,7 @@
       this.server = null
       this._characteristics = new Map()
     }
+
     connect () {
       return navigator.bluetooth.requestDevice({filters: [{services: [ 'heart_rate' ]}]})
       .then(device => {
@@ -24,6 +25,15 @@
           })
         ])
       })
+    }
+
+    disconnect() {
+      if (!this.device) {
+        return;
+      }
+      if (this.device.gatt.connected) {
+        this.device.gatt.disconnect()
+      }
     }
 
     /* Heart Rate Service */
