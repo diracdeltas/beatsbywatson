@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="src/pure/pure-min.css">
+        <link rel="stylesheet" href="realtime.css">
+        <script src="src/d3/d3js.v3.min.js"></script>
+    </head>
+    <body>
+    <style>
+        circle {
+            opacity: 0.5;
+        }
+        #graph {
+            text-align:center;
+        }
+    </style>
+        <header>
+            <div class="title"><h1>Heart Viz: Poincare</h1></div>
+            <div class="controls">
+                <button id="connectButton" class="pure-button pure-button-primary">Connect</button>
+                <button id="disconnectButton" class="pure-button pure-button-disabled">Disconnect</button>
+            </div>
+        </header>
+        <div class="graph" id="graph">
+            <svg id="chart"></svg>
+        </div>
+        <footer>Made by Daniel Fennelly</footer>
+        <script src="src/utils.js"></script>
+        <script src="src/heartRateSensor.js"></script>
+        <script src="src/poincare.js"></script>
+        <script src="src/listeners.js"></script>
+    </body>
+</html>

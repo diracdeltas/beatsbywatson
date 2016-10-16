@@ -1,0 +1,59 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+#graph {
+    flex: 1;
+}
+
+header {
+    padding: 5px;
+    display: flex;
+}
+
+.title {
+    width: 50%;
+}
+
+.controls {
+    text-align: right;
+    width: 50%;
+}
+
+path {
+    fill: none;
+    stroke-width: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+}
+
+.graph .axis {
+    stroke-width: 1;
+}
+
+.graph .axis .tick line {
+    stroke: black;
+}
+
+.graph .axis .tick text {
+    fill: black;
+    font-size: 0.7em;
+}
+
+.graph .axis .domain {
+    fill: none;
+    stroke: black;
+}
+
+.graph .group {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5;
+}
